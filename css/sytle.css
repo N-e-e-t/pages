@@ -21,6 +21,7 @@ img{
 .page-header{
   display: flex;
   justify-content:space-between;
+  background-color: #ab0f50;
 }
 
 .wrapper{
@@ -36,9 +37,26 @@ img{
   margin-left: 14px;
 }
 
+/**-- main-content --**/
+input.btn--orange {
+  color: #fff;
+  background-color: #eb6100;
+  border-bottom: 5px solid #b84c00;
+}
+input.btn--orange:hover {
+  margin-top: 3px;
+  color: #fff;
+  background: #f56500;
+  border-bottom: 2px solid #b84c00;
+}
+input.btn--shadow {
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
 /**-- bg --**/
 .bg{
-  background: #f3ffe6;
+  background: #f6f0cc;
 }
 
 /**-- iframe --**/
@@ -48,7 +66,7 @@ iframe{
 
 /**-- sns --**/
 #sns{
-  background: #FAF7F0;
+  background: #3aacad;
   padding: 6% 0;
 }
 .media{
