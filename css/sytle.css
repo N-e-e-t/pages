@@ -21,7 +21,11 @@ img{
 .page-header{
   display: flex;
   justify-content:space-between;
-  background-color: #ab0f50;
+  background-color: #f6f0cc;;
+}
+
+a.page-logo{
+  color:navy;
 }
 
 .wrapper{
@@ -37,32 +41,52 @@ img{
   margin-left: 14px;
 }
 
+/**-- ナビバー --**/
+.main-nav{
+  display:flex;
+  font-size:1.25rem;
+  margin-top:36px;
+  list-style:none;
+}
+.main-nav li{
+  margin-left:16px;
+}
+
+.main-nav a{
+  color:#432;
+}
+.main-nav a:hover{
+  color:#0bd;
+  text-decoration: underline #0bd;
+}
+
 /**-- main-content --**/
-input.btn--orange {
-  color: #fff;
-  background-color: #eb6100;
-  border-bottom: 5px solid #b84c00;
+.page-title{
+  margin-top: 20%;
+  text-align: center;
 }
-input.btn--orange:hover {
-  margin-top: 3px;
-  color: #fff;
-  background: #f56500;
-  border-bottom: 2px solid #b84c00;
-}
-input.btn--shadow {
-  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+.main-content{
+  text-align: center;
 }
 
 /**-- bg --**/
 .bg{
-  background: #f6f0cc;
+  background-image:url(../images/home.png);
+  background-size:cover;
+  background-color:#b6b198;
+  background-blend-mode:soft-light;
+  min-height: 100vh;
 }
 
 /**-- iframe --**/
 iframe{
   width: 100%;
 }
+
+h2.media{
+  text-align: center;
+}
+
 
 /**-- sns --**/
 #sns{
@@ -78,10 +102,15 @@ iframe{
   justify-content: space-between;
 }
 #sns .sub-title{
+  text-align: center;
   margin-bottom: 30px;
 }
 .sns-box{
   width: 40%;
+}
+img.sns-logo{
+  width:1.5em;
+  height:1.5em;
 }
 
 @media (max-width:600px){
