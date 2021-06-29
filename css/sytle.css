@@ -66,8 +66,56 @@ a.page-logo{
   text-align: center;
 }
 .main-content{
+  margin-top:18px;
   text-align: center;
 }
+
+/*下からフェードイン*/
+.fade-in-bottom1 {
+  opacity: 0;
+  animation-name: fadein-bottom;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes fadein-bottom {
+  0% {
+     opacity: 0;
+     transform: translateY(20px);
+  }
+  100% {
+     opacity: 1;
+     transform: translateY(0);
+  }
+}
+.fade-in-bottom2{
+  opacity:0;
+  animation-name:fadein-bottom2;
+  animation-duration:1.5s;
+  animation-timing-function:ease-out;
+  animation-fill-mode:forwards;
+}
+@keyframes fadein-bottom2{
+  0%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  20%{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  85%{
+    opacity:0.9;
+  }
+  90%{
+    opacity:0.95;
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 /**-- bg --**/
 .bg{
@@ -114,6 +162,26 @@ img.sns-logo{
 }
 
 @media (max-width:600px){
+  /* ヘッダー */
+  .page-header{
+    flex-direction: column;
+  }
+  .page-header h1{
+    font-size: x-large;
+  }
+  ul.main-nav{
+    margin-top: 0;
+    justify-content: space-between;
+  }
+  .main-nav li{
+    margin-left:auto;
+    margin-right:auto;
+  }
+  /* メイン */
+  .page-title{
+    margin-top: 50%;
+  }
+
   #sns .wrapper{
     flex-direction: column;
   }
