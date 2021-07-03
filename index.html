@@ -23,13 +23,22 @@
         </h1>
 
         <!-- navigation -->
-        <nav>
-          <ul class="main-nav">
-            <li><a href="">トップ</a></li>
-            <li><a href="">ブログ</a></li>
-            <li><a href="">プロフィール</a></li>
-          </ul>
-        </nav>
+        <div id="hamburger">
+          <p class="btn-gNav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </p>
+          
+          <nav id="gNav">
+            <ul class="gNav-menu">
+              <li></li>
+              <li><a href="">トップ</a></li>
+              <li><a href="">ブログ</a></li>
+              <li><a href="">プロフィール</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -75,5 +84,16 @@
 
     </div>
   </section> <!-- #sns -->
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(function() {
+      $('.btn-gNav').on("click", function(){
+		    $(this).toggleClass('open');
+		    $('#gNav').toggleClass('open');
+	    });
+    });
+  </script>
 </body>
 </html>
