@@ -31,7 +31,7 @@ github_username: N-e-e-t
 instagram_username: nr_0914
 
 # Build settings
-theme: minima
+theme: jekyll-theme-yat
 plugins:
   - jekyll-feed
 
