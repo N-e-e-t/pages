@@ -46,7 +46,7 @@ img {
 .hero-inner,
 .content-wrap,
 .footer-inner {
-  width: min(860px, calc(100% - 32px));
+  width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
 }
 
@@ -118,8 +118,8 @@ img {
 
 .content-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 260px;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -167,7 +167,7 @@ img {
 
 .post-card,
 .page-content {
-  max-width: 760px;
+  max-width: none;
 }
 
 .blog-sidebar {
