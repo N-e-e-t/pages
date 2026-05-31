@@ -11,7 +11,10 @@ layout: default
 </section>
 
 <main class="content-wrap">
-  <section class="post-card page-content">
-    {{ content }}
-  </section>
+  <div class="content-grid">
+    <section class="post-card page-content main-column">
+      {{ content }}
+    </section>
+    {% include sidebar.html %}
+  </div>
 </main>

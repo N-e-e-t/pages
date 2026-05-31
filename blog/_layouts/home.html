@@ -11,20 +11,25 @@ layout: default
 </section>
 
 <main class="content-wrap">
-  {%- if site.posts.size > 0 -%}
-    <section class="post-list">
-      {%- for post in site.posts -%}
-        <article class="post-list-item">
-          <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}{% if post.categories and post.categories != empty %} | {{ post.categories | join: " / " }}{% endif %}</div>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
-        </article>
-      {%- endfor -%}
-    </section>
-  {%- else -%}
-    <section class="empty-state">
-      <h2>No posts yet</h2>
-      <p>Articles will appear here as the blog grows.</p>
-    </section>
-  {%- endif -%}
+  <div class="content-grid">
+    <div class="main-column">
+      {%- if site.posts.size > 0 -%}
+        <section class="post-list">
+          {%- for post in site.posts -%}
+            <article class="post-list-item">
+              <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}{% if post.categories and post.categories != empty %} | {{ post.categories | join: " / " }}{% endif %}</div>
+              <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+              <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+            </article>
+          {%- endfor -%}
+        </section>
+      {%- else -%}
+        <section class="empty-state">
+          <h2>No posts yet</h2>
+          <p>Articles will appear here as the blog grows.</p>
+        </section>
+      {%- endif -%}
+    </div>
+    {% include sidebar.html %}
+  </div>
 </main>
