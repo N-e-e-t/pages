@@ -1,15 +1,15 @@
 ---
 layout: page
-title: Profile
+title: プロフィール
 permalink: /about/
 ---
 
-This is the profile page for N-e-e-t Lab.
+N-e-e-t Lab のプロフィールページです。
 
-The site is meant to collect small posts, notes, and update logs over time.
+このサイトでは、記事、メモ、更新記録のような小さな記録を少しずつ積み重ねていく予定です。
 
-- Blog: posts and notes
-- Top page: site entrance
-- SNS: short updates and links
+- ブログ: 記事やメモの置き場
+- トップページ: サイト全体の入口
+- SNS: 短い更新やリンク集
 
-The structure is still being cleaned up, but this is now the main starting point.
+まだ整理中ですが、ここから少しずつ内容を増やしていきます。

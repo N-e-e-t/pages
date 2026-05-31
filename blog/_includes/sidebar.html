@@ -1,6 +1,6 @@
 <aside class="blog-sidebar">
   <section class="sidebar-section">
-    <h2 class="sidebar-title">Recent Posts</h2>
+    <h2 class="sidebar-title">最近の記事</h2>
     <ul class="sidebar-list">
       {%- for post in site.posts limit: 6 -%}
         <li>
@@ -11,7 +11,7 @@
   </section>
 
   <section class="sidebar-section">
-    <h2 class="sidebar-title">Categories</h2>
+    <h2 class="sidebar-title">カテゴリ</h2>
     <ul class="sidebar-list">
       {%- assign sorted_categories = site.categories | sort -%}
       {%- for category in sorted_categories -%}
@@ -24,12 +24,12 @@
   </section>
 
   <section class="sidebar-section">
-    <h2 class="sidebar-title">Links</h2>
+    <h2 class="sidebar-title">リンク</h2>
     <ul class="sidebar-list">
-      <li><a href="/pages/blog/">Blog index</a></li>
-      <li><a href="/pages/blog/about/">Profile</a></li>
-      <li><a href="/pages/blog/categories/">Categories</a></li>
-      <li><a href="/pages/">Top page</a></li>
+      <li><a href="/pages/blog/">ブログ一覧</a></li>
+      <li><a href="/pages/blog/about/">プロフィール</a></li>
+      <li><a href="/pages/blog/categories/">カテゴリ一覧</a></li>
+      <li><a href="/pages/">トップページ</a></li>
     </ul>
   </section>
 </aside>

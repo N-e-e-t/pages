@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "Starting to tidy up the blog"
+title: "ブログを整理しはじめました"
 date: 2021-07-07 00:00:56 +0900
 categories: site update
 ---
 
-The top page and the blog had started to feel too separate, so this is the first pass at cleaning up the structure.
+トップページとブログの役割が少し分かれすぎていたので、まずは入口まわりの整理から始めました。
 
-This update focuses on three small improvements.
+今回の最初の調整では、次の3点を整えています。
 
-- Remove broken sample text and old starter content
-- Make the links to the blog and profile easier to find
-- Turn the default Jekyll post into a real site update
+- 文字化けしていたサンプル文言や初期状態の内容を整理
+- ブログとプロフィールへの導線を分かりやすく調整
+- Jekyll の初期記事を、このサイト向けの更新記事に差し替え
 
-From here, the next step is to keep adding posts and gradually shape the blog into the main update space.
+ここから先は、記事を増やしながら少しずつブログ側をメインの更新場所に育てていく予定です。

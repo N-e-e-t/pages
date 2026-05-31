@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Categories
+title: カテゴリ
 permalink: /categories/
 ---
 
-<p class="taxonomy-intro">Browse posts by category.</p>
+<p class="taxonomy-intro">カテゴリごとに記事を一覧できます。</p>
 
 {%- assign sorted_categories = site.categories | sort -%}
 
@@ -16,7 +16,7 @@ permalink: /categories/
 <section class="taxonomy-group" id="{{ category_name | slugify }}">
   <div class="taxonomy-heading">
     <h2>{{ category_name }}</h2>
-    <p>{{ posts.size }} post{% if posts.size != 1 %}s{% endif %}</p>
+    <p>{{ posts.size }} 件</p>
   </div>
   <ul class="taxonomy-list">
   {%- for post in posts -%}

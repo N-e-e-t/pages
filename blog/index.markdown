@@ -1,4 +1,4 @@
 ---
 layout: home
-title: Notes and Posts
+title: ブログ
 ---
