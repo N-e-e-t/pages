@@ -4,35 +4,14 @@ layout: default
 
 <section class="page-hero">
   <div class="hero-inner">
-    <div class="hero-panel">
-      <p class="hero-kicker">Page</p>
-      <h1 class="hero-title">{{ page.title | escape }}</h1>
-      <p class="hero-copy">{{ site.description }}</p>
-    </div>
+    <p class="hero-kicker">Page</p>
+    <h1 class="hero-title">{{ page.title | escape }}</h1>
+    <p class="hero-copy">{{ site.description }}</p>
   </div>
 </section>
 
 <main class="content-wrap">
-  <div class="content-grid">
-    <section class="post-card page-content">
-      {{ content }}
-    </section>
-
-    <aside class="side-stack">
-      <section class="side-card">
-        <h2 class="card-title">Topics</h2>
-        <ul class="topic-list">
-          <li>Tech</li>
-          <li>Gadgets</li>
-          <li>Games</li>
-          <li>Notes</li>
-        </ul>
-      </section>
-      <section class="side-card">
-        <h2 class="card-title">Links</h2>
-        <p><a href="{{ '/blog/' | relative_url }}">Blog index</a></p>
-        <p><a href="{{ '/' | relative_url }}">Top page</a></p>
-      </section>
-    </aside>
-  </div>
+  <section class="post-card page-content">
+    {{ content }}
+  </section>
 </main>
