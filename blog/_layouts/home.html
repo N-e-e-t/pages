@@ -1,0 +1,57 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-panel">
+      <p class="hero-kicker">Blog</p>
+      <h1 class="hero-title">{{ page.title | default: site.title }}</h1>
+      <p class="hero-copy">Notes on tech, gadgets, games, and small updates. The look stays simple so different kinds of posts can live together comfortably.</p>
+    </div>
+  </div>
+</section>
+
+<main class="content-wrap">
+  <div class="content-grid">
+    <section class="main-card">
+      {%- if site.posts.size > 0 -%}
+        <div class="post-list">
+          {%- for post in site.posts -%}
+            <article class="post-list-item">
+              <div class="post-meta">{{ post.date | date: "%Y-%m-%d" }}{% if post.categories and post.categories != empty %} | {{ post.categories | join: " / " }}{% endif %}</div>
+              <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+              <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 180 }}</p>
+            </article>
+          {%- endfor -%}
+        </div>
+      {%- else -%}
+        <div class="empty-card">
+          <h2 class="card-title">No posts yet</h2>
+          <p class="card-copy">Articles will appear here as the blog grows.</p>
+        </div>
+      {%- endif -%}
+    </section>
+
+    <aside class="side-stack">
+      <section class="side-card">
+        <h2 class="card-title">Tone</h2>
+        <p>This blog is designed for mixed topics without feeling noisy or heavy.</p>
+      </section>
+      <section class="side-card">
+        <h2 class="card-title">Topics</h2>
+        <ul class="topic-list">
+          <li>Tech notes</li>
+          <li>Gadget reviews</li>
+          <li>Game impressions</li>
+          <li>Site updates</li>
+        </ul>
+      </section>
+      <section class="side-card">
+        <h2 class="card-title">Links</h2>
+        <p><a href="{{ '/blog/about/' | relative_url }}">Profile</a></p>
+        <p><a href="{{ '/' | relative_url }}">Back to top page</a></p>
+      </section>
+    </aside>
+  </div>
+</main>

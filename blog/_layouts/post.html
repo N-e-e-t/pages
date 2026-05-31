@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<section class="page-hero">
+  <div class="hero-inner">
+    <div class="hero-panel">
+      <p class="hero-kicker">Post</p>
+      <h1 class="hero-title">{{ page.title | escape }}</h1>
+      <p class="hero-copy">{{ page.date | date: "%Y-%m-%d" }}{% if page.categories and page.categories != empty %} | {{ page.categories | join: " / " }}{% endif %}</p>
+    </div>
+  </div>
+</section>
+
+<main class="content-wrap">
+  <div class="content-grid">
+    <article class="post-card">
+      {{ content }}
+    </article>
+
+    <aside class="side-stack">
+      <section class="side-card">
+        <h2 class="card-title">About this blog</h2>
+        <p>Simple posts about tech, gadgets, games, and small site updates.</p>
+      </section>
+      <section class="side-card">
+        <h2 class="card-title">Navigate</h2>
+        <p><a href="{{ '/blog/' | relative_url }}">All posts</a></p>
+        <p><a href="{{ '/blog/about/' | relative_url }}">Profile</a></p>
+      </section>
+    </aside>
+  </div>
+</main>

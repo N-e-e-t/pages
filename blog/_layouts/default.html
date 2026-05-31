@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'ja' }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title | escape }} | {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="{{ '/images/favicons/favicon.ico' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/blog.css' | relative_url }}">
+    {%- feed_meta -%}
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="header-inner">
+          <a class="brand" href="{{ '/' | relative_url }}">
+            <img class="brand-mark" src="{{ '/images/favicons/icon-32x32.png' | relative_url }}" alt="N-e-e-t Lab logo">
+            <span>{{ site.title }}</span>
+          </a>
+          <nav class="site-nav">
+            <a href="{{ '/' | relative_url }}">Top</a>
+            <a href="{{ '/blog/' | relative_url }}">Blog</a>
+            <a href="{{ '/blog/about/' | relative_url }}">Profile</a>
+          </nav>
+        </div>
+      </header>
+
+      {{ content }}
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <p>N-e-e-t Lab Blog</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
