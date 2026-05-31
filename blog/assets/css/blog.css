@@ -231,6 +231,64 @@ img {
   color: var(--text);
 }
 
+.taxonomy-intro {
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+
+.taxonomy-groups {
+  display: grid;
+  gap: 36px;
+}
+
+.taxonomy-group {
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.taxonomy-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.taxonomy-heading h2 {
+  margin: 0;
+}
+
+.taxonomy-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.taxonomy-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.taxonomy-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+.taxonomy-list li:first-child {
+  border-top: 0;
+}
+
+.taxonomy-list span {
+  color: var(--muted);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
 .post-card code,
 .page-content code {
   padding: 0.12em 0.35em;
@@ -275,6 +333,16 @@ img {
     position: static;
     border-top: 1px solid var(--border);
     padding-top: 28px;
+  }
+
+  .taxonomy-heading,
+  .taxonomy-list li {
+    display: block;
+  }
+
+  .taxonomy-list span {
+    display: block;
+    margin-top: 4px;
   }
 
   .header-inner {

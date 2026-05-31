@@ -4,16 +4,28 @@ title: Categories
 permalink: /categories/
 ---
 
+<p class="taxonomy-intro">Browse posts by category.</p>
+
 {%- assign sorted_categories = site.categories | sort -%}
 
+<div class="taxonomy-groups">
 {%- for category in sorted_categories -%}
   {%- assign category_name = category | first -%}
   {%- assign posts = category | last -%}
 
-## <span id="{{ category_name | slugify }}">{{ category_name }}</span>
-
-{%- for post in posts -%}
-- [{{ post.title | escape }}]({{ post.url | relative_url }}) - {{ post.date | date: "%Y-%m-%d" }}
+<section class="taxonomy-group" id="{{ category_name | slugify }}">
+  <div class="taxonomy-heading">
+    <h2>{{ category_name }}</h2>
+    <p>{{ posts.size }} post{% if posts.size != 1 %}s{% endif %}</p>
+  </div>
+  <ul class="taxonomy-list">
+  {%- for post in posts -%}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+    </li>
+  {%- endfor -%}
+  </ul>
+</section>
 {%- endfor -%}
-
-{%- endfor -%}
+</div>
