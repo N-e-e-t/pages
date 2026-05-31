@@ -27,8 +27,13 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.2"
-          bundler-cache: true
           working-directory: blog
+
+      - name: Install blog dependencies
+        working-directory: blog
+        run: |
+          bundle lock --add-platform x86_64-linux
+          bundle install
 
       - name: Prepare static site root
         run: |
