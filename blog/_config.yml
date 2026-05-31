@@ -32,6 +32,7 @@ instagram_username: nr_0914
 theme: minima
 plugins:
   - jekyll-feed
+future: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
