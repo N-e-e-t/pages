@@ -237,7 +237,11 @@ h2.media {
   gap: 16px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-link-item {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
   color: #5d5447;
   font-size: 0.95rem;
 }

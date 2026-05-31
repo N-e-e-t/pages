@@ -323,6 +323,12 @@ img {
   font-size: 0.92rem;
 }
 
+.blog-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
 @media (max-width: 640px) {
   .content-grid {
     grid-template-columns: 1fr;
