@@ -2,7 +2,7 @@
 layout: post
 title: "【DMM版学マス】ロードが終わらない！ NVIDIAの垂直同期を変えたら直った"
 date: 2026-09-25 00:00:00 +0900
-categories: tech games 学マス
+categories: ["tech", "games", "学マス"]
 ---
 学マスでオーディションが終わったあと、ロード画面から全然進まない……。
 
