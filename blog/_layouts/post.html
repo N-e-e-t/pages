@@ -4,9 +4,9 @@ layout: default
 
 <section class="page-hero">
   <div class="hero-inner">
-    <p class="hero-kicker">記事</p>
+    <nav class="hero-kicker" aria-label="パンくずリスト"><a href="/pages/">トップ</a> / <a href="{{ '/' | relative_url }}">ブログ</a> / <span aria-current="page">記事</span></nav>
     <h1 class="hero-title">{{ page.title | escape }}</h1>
-    <p class="hero-copy">{{ page.date | date: "%Y-%m-%d" }}{% if page.categories and page.categories != empty %} | {{ page.categories | join: " / " }}{% endif %}</p>
+    <p class="hero-copy"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>{% if page.categories and page.categories != empty %} | {{ page.categories | join: " / " }}{% endif %}</p>
   </div>
 </section>
 
@@ -14,6 +14,12 @@ layout: default
   <div class="content-grid">
     <article class="post-card main-column">
       {{ content }}
+      <nav class="post-navigation" aria-label="記事を探す">
+        <a href="{{ '/' | relative_url }}">ブログの記事一覧へ</a>
+        {% for category in page.categories %}
+          <a href="{{ '/categories/' | relative_url }}#{{ category | slugify }}">{{ category | escape }}の記事</a>
+        {% endfor %}
+      </nav>
     </article>
     {% include sidebar.html %}
   </div>

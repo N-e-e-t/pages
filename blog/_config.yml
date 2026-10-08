@@ -32,7 +32,21 @@ instagram_username: nr_0914
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+lang: ja
+locale: ja_JP
+timezone: Asia/Tokyo
 future: true
+
+# All dated posts share article metadata; titles remain in the layout.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      seo:
+        type: BlogPosting
 
 # Exclude from processing.
 # The following items will not be processed, by default.

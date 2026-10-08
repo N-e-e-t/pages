@@ -1,5 +1,31 @@
 @charset "UTF-8";
 
+.wrapper.featured-post {
+  padding-top: 40px;
+  padding-bottom: 48px;
+}
+
+.featured-post h2 {
+  margin-bottom: 16px;
+}
+
+.featured-post h3 {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.featured-post p {
+  margin: 12px 0;
+}
+
+.featured-post a {
+  color: #0b6e74;
+}
+
+.featured-post a:hover {
+  text-decoration: underline;
+}
+
 html {
   font-size: 100%;
 }
@@ -90,7 +116,7 @@ a.page-logo {
 }
 
 .bg {
-  background-image: linear-gradient(rgba(246, 240, 204, 0.5), rgba(246, 240, 204, 0.4)), url(../images/home.png);
+  background-image: linear-gradient(rgba(246, 240, 204, 0.5), rgba(246, 240, 204, 0.4)), url(../images/home.webp);
   background-size: cover;
   background-position: center;
   min-height: 100vh;

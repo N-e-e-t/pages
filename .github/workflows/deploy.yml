@@ -40,7 +40,7 @@ jobs:
           mkdir -p _site
           cp index.html _site/index.html
           cp privacy.html _site/privacy.html
-          cp README.md _site/README.md
+          cp sitemap.xml site-pages.xml _site/
           cp -r css _site/css
           cp -r images _site/images
           cp -r scripts _site/scripts
@@ -48,6 +48,9 @@ jobs:
       - name: Build blog into /blog
         working-directory: blog
         run: bundle exec jekyll build --destination ../_site/blog
+
+      - name: Check generated site
+        run: python3 checks/check_site.py _site
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

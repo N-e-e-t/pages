@@ -1,6 +1,7 @@
 ---
 layout: page
 title: カテゴリ
+description: N-e-e-t Lab Blogの記事をカテゴリ別に探せます。ゲームや技術に関する記事の一覧です。
 permalink: /categories/
 ---
 
